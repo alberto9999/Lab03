@@ -65,6 +65,38 @@ private double time;
 		for(String parola :inputTextList){
 			RichWord w = new RichWord(parola);
 			listaWord.add(w);
+			
+		/*	
+			if(lingua.compareTo("English")==0){	
+				
+			temp=false;
+				int delMin=0;
+				int delMax=listaEnglish.size()-1;
+				int centro;
+				while (temp==false&&delMin<=delMax){
+					centro=(delMin+delMax)/2;
+					int result=listaEnglish.get(centro).compareTo(parola); 
+					
+					if(result==0){
+						temp=true;	
+					}                                                        //trovato su internet ma non mi trova alcune parole
+					else{
+						if(result >0){
+							delMax=centro-1;
+							
+							
+						}
+						else{
+							delMin=centro+1;
+							
+						}
+					}					
+				}	
+				
+			}
+			*/
+
+			
 		
 			if(lingua.compareTo("English")==0){	
 				temp= false;
@@ -72,7 +104,7 @@ private double time;
 				int delMin=0;
 				int delMax=listaEnglish.size();
 				int diff=delMax-delMin;
-				for(int i=0;i<listaEnglish.size()&&temp==false&&diff>1;i++){
+				for(int i=0;i<(listaEnglish.size())&&temp==false&&diff>=1;i++){
 					int result=listaEnglish.get(indice).compareTo(parola); 
 					if(result==0){
 						temp=true;	
@@ -99,7 +131,7 @@ private double time;
 				int delMin=0;
 				int delMax=listaItaliano.size();
 				int diff=delMax-delMin;
-				for(int i=0;i<(listaItaliano.size())&&temp==false&&diff>1;i++){
+				for(int i=0;i<(listaItaliano.size())&&temp==false&&diff>=1;i++){
 					int result=listaItaliano.get(indice).compareTo(parola); 
 					if(result==0){
 						temp=true;	
@@ -113,7 +145,7 @@ private double time;
 						}
 						else{
 							delMin=indice;
-							indice=indice+(int)((delMax+indice)/2);
+							indice=(int)((delMax+indice)/2);
 							diff=delMax-delMin;
 							
 						}
@@ -121,6 +153,7 @@ private double time;
 			}	
 				
 			}
+			
 			
 		/*
 			if(lingua.compareTo("English")==0){	
@@ -144,7 +177,7 @@ private double time;
 					}		
 				}
 			}
-			*/
+		//	*/
 			
 			if(temp==false){
 			w.setCorretto(false);
