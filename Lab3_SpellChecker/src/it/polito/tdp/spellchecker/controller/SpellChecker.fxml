@@ -44,7 +44,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="cmbboxLanguage" promptText="English">
+                  <ComboBox fx:id="cmbboxLanguage">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -76,7 +76,7 @@
             <TextArea fx:id="txtWrong" />
             <HBox alignment="CENTER_RIGHT" spacing="10.0">
                <children>
-                  <Label fx:id="lblError" />
+                  <Label fx:id="lblError" textFill="#c61414" />
                   <Button fx:id="btnClear" mnemonicParsing="false" onAction="#doClear" text="Clear Text" textFill="#0b860f">
                      <font>
                         <Font name="System Bold" size="12.0" />
